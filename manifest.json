@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Karma Assistant",
+  "version": "0.1.0",
+  "description": "Draft thoughtful Reddit replies with AI. Draft-only — you review and submit yourself.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.reddit.com/*",
+    "https://api.openai.com/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.reddit.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Reddit Karma Assistant settings",
+    "default_popup": "options.html"
+  }
+}

@@ -1,0 +1,148 @@
+/* Reset Reddit's inherited styles on everything we inject, so the host
+   page's CSS can't distort our padding / fonts / button appearance. */
+#rka-btn,
+#rka-panel,
+#rka-panel * {
+  box-sizing: border-box !important;
+  font-family: -apple-system, system-ui, sans-serif !important;
+  line-height: 1.4 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  margin: 0 !important;
+  min-width: 0 !important;
+}
+#rka-btn,
+#rka-panel button,
+#rka-panel input,
+#rka-panel textarea {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  box-shadow: none !important;
+}
+/* Flex-center the label inside every button so text sits dead center
+   regardless of font baseline/line-height quirks. */
+#rka-btn,
+#rka-panel button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#rka-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147483647;
+  background: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  font-family: -apple-system, system-ui, sans-serif;
+}
+#rka-btn:hover { background: #e03d00; }
+
+#rka-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147483647;
+  width: 380px;
+  max-width: 90vw;
+  background: #1a1a1b;
+  color: #d7dadc;
+  border: 1px solid #343536;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, system-ui, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+}
+#rka-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #343536;
+}
+#rka-close {
+  background: none;
+  border: none;
+  color: #818384;
+  cursor: pointer;
+  font-size: 16px;
+}
+#rka-status {
+  padding: 8px 14px 0;
+  font-size: 12px;
+  min-height: 16px;
+  color: #818384;
+}
+#rka-status.ok { color: #46d160; }
+#rka-status.err { color: #ff6b6b; }
+#rka-draft {
+  margin: 8px 14px;
+  min-height: 160px;
+  background: #272729;
+  color: #d7dadc;
+  border: 1px solid #343536;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  resize: vertical;
+  font-family: inherit;
+}
+#rka-refine-row {
+  display: flex;
+  gap: 8px;
+  padding: 0 14px 8px;
+}
+#rka-refine {
+  flex: 1;
+  background: #272729;
+  color: #d7dadc;
+  border: 1px solid #343536;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 13px;
+  font-family: inherit;
+}
+#rka-improve {
+  background: #343536;
+  color: #d7dadc;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#rka-actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 14px;
+}
+#rka-actions button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+#rka-generate { background: #ff4500; color: #fff; }
+#rka-copy { background: #343536; color: #d7dadc; }
+#rka-hint {
+  padding: 8px 14px 14px;
+  font-size: 11px;
+  color: #818384;
+}
