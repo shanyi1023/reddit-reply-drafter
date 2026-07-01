@@ -1,4 +1,4 @@
-# Reddit Karma AI Comment Drafter
+# Reddit Reply Drafter
 
 A Chrome extension that drafts thoughtful Reddit replies with AI, right on the
 thread page. **Draft-only** — it never posts for you. You read, edit, and submit

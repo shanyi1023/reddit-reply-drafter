@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Reddit Karma Assistant",
+  "name": "Reddit Reply Drafter",
   "version": "0.1.0",
   "description": "Draft thoughtful Reddit replies with AI. Draft-only — you review and submit yourself.",
   "permissions": ["storage"],
@@ -19,7 +19,7 @@
   ],
   "options_page": "options.html",
   "action": {
-    "default_title": "Reddit Karma Assistant settings",
+    "default_title": "Reddit Reply Drafter settings",
     "default_popup": "options.html"
   }
 }

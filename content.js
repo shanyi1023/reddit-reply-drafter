@@ -1,4 +1,4 @@
-// Reddit Karma Assistant — content script
+// Reddit Reply Drafter — content script
 // Runs on https://www.reddit.com/r/*/comments/* (a thread page).
 // 1. Injects a floating "Draft reply" button + panel.
 // 2. Reads the post via a SAME-ORIGIN .json fetch (carries your login cookies,
